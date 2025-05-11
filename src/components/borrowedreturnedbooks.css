@@ -1,0 +1,59 @@
+body {
+    background: linear-gradient(to bottom right, #141e30, #243b55);
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+.container h3 {
+    color: #ffffff;
+    font-weight: bold;
+    margin-bottom: 2rem;
+}
+
+.nav-tabs .nav-link {
+    color: rgba(255, 255, 255, 0.6);
+    background-color: transparent;
+    border: none;
+}
+
+.nav-tabs .nav-link.active {
+    color: #ffffff;
+    background-color: #243b55;
+    border-bottom: 2px solid #1abc9c;
+}
+
+.book-card {
+    height: 100%;
+    min-height: 420px; 
+    max-height: 420px; 
+}
+
+
+
+.slick-slider {
+    width: 100%;
+}
+
+.slick-slide > div {
+    display: flex;
+    justify-content: center;
+}
+
+.book-card {
+    width: 100%;
+    max-width: 300px;
+    margin: auto;
+}
+
+
+@media (max-width: 768px) {
+    .container {
+      padding: 2rem;
+    }
+  
+    .book-card {
+      min-height: 380px;
+      max-height: 100%;
+    }
+  }
+  

@@ -1,0 +1,119 @@
+body {
+    background: linear-gradient(to right, #141e30, #243b55);
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.container {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px; 
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+  .btn-success {
+    background: linear-gradient(to right, #4CAF50, #2E8B57);
+    border: none;
+    color: #fff;
+  }
+  
+  .btn-success:hover {
+    background: linear-gradient(to right, #45a049, #2E7D32);
+  }
+  
+  .btn-danger {
+    background: linear-gradient(to right, #e74c3c, #c0392b);
+    border: none;
+    color: #fff;
+  }
+  
+  .btn-danger:hover {
+    background-color: #a5281b;
+  }
+  
+  .btn-primary {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+    border: none;
+    color: #fff;
+  }
+  
+  .btn-primary:hover {
+    opacity: 0.9;
+  }
+  
+  .btn-secondary {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid #131f2c;
+    color: #fff;
+  }
+  
+  .btn-secondary:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+  
+  .modal-content {
+    background: linear-gradient(to bottom, #2c3e50, #1a2a3a);
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+  
+  .form-control {
+    background-color: #1a2a3a;
+    border: 1px solid #ccc;
+    color: #ffffff;
+  }
+  
+  .form-control:focus {
+    border-color: #4CAF50;
+    box-shadow: 0 0 0 0.2rem rgba(76, 175, 80, 0.25);
+  }
+  
+  .form-label {
+    color: rgba(255, 255, 255, 0.8);
+  }
+  
+.librarians-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  margin-top: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.03);
+}
+
+.librarians-table th,
+.librarians-table td {
+    padding: 15px;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.librarians-table th {
+    background-color: rgba(20, 30, 48, 0.85);
+}
+
+.librarians-table tbody tr {
+    background: rgba(255, 255, 255, 0.03);
+    transition: background-color 0.3s ease;
+}
+
+.librarians-table tbody tr:hover {
+    background: linear-gradient(to right, rgba(20, 30, 48, 0.655), #2c3e50c3);
+    color: #ffffff;
+}
+
+@media (max-width: 576px) {
+  .librarians-table th,
+  .librarians-table td {
+    padding: 8px;
+    font-size: 14px;
+  }
+  h2 {
+    font-size: 20px;
+  }
+}
