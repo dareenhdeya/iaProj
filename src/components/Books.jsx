@@ -8,6 +8,29 @@ import ToastNotification from "./ToastNotification";
 const Book = () => {
   const API_URL = "http://localhost:5209/admin";
 
+  const categories = [
+    "Fiction",
+    "Non-Fiction",
+    "Science Fiction",
+    "Mystery",
+    "Romance",
+    "Thriller",
+    "Biography",
+    "History",
+    "Science",
+    "Technology",
+    "Philosophy",
+    "Poetry",
+    "Drama",
+    "Comics",
+    "Children's Books",
+    "Educational",
+    "Self-Help",
+    "Business",
+    "Art",
+    "Cookbooks"
+  ];
+
   const [allBooks, setAllBooks] = useState([]);
   const [books, setBooks] = useState([]);
   const [selectedBook, setSelectedBook] = useState(null);
@@ -419,7 +442,7 @@ const Book = () => {
                     </Form.Group>
                     <Form.Group className="mb-2">
                       <Form.Label htmlFor="updateBookCategory">Category</Form.Label>
-                      <Form.Control
+                      <Form.Select
                         id="updateBookCategory"
                         value={selectedBook.category}
                         isInvalid={!!bookErrors.category}
@@ -429,7 +452,15 @@ const Book = () => {
                             category: e.target.value,
                           })
                         }
-                      />
+                        className="form-select custom-select"
+                      >
+                        <option value="">Select a category</option>
+                        {categories.map((category, index) => (
+                          <option key={index} value={category}>
+                            {category}
+                          </option>
+                        ))}
+                      </Form.Select>
                       <Form.Control.Feedback type="invalid">{bookErrors.category}</Form.Control.Feedback>
                     </Form.Group>
                     <Form.Group className="mb-2">
@@ -513,14 +544,22 @@ const Book = () => {
               </Form.Group>
               <Form.Group className="mb-2">
                 <Form.Label htmlFor="newBookCategory">Category</Form.Label>
-                <Form.Control
+                <Form.Select
                   id="newBookCategory"
                   value={newBook.category}
                   isInvalid={!!bookErrors.category}
                   onChange={(e) =>
                     setNewBook({ ...newBook, category: e.target.value })
                   }
-                />
+                  className="form-select custom-select"
+                >
+                  <option value="">Select a category</option>
+                  {categories.map((category, index) => (
+                    <option key={index} value={category}>
+                      {category}
+                    </option>
+                  ))}
+                </Form.Select>
                 <Form.Control.Feedback type="invalid">{bookErrors.category}</Form.Control.Feedback>
               </Form.Group>
               <Form.Group className="mb-2">

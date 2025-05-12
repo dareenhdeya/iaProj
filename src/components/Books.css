@@ -185,3 +185,8 @@ border-color: #008c74;
 .card-footer .btn {
   margin-left: 0.25rem;
 }
+
+
+.form-select.custom-select option[value=""] {
+  color: #95a5a6;
+}
